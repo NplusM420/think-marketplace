@@ -84,7 +84,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              Discover apps, tools, and agents built on the Think protocol. A curated showcase of AI you own.
+              Apps, tools, and agents built on the Think protocol. AI you actually own.
             </p>
             <div className="mt-6 flex gap-4">
               <a

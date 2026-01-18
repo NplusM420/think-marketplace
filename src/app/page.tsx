@@ -42,9 +42,8 @@ export default function HomePage() {
               <span className="text-primary">Think</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              A curated showcase of agents, tools, and apps from the builders
-              shaping user-owned AI — where you control your AI, your data, and
-              how it works for you.
+              Agents, tools, and apps from builders creating AI you actually
+              own. Your AI, your data, your rules.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild>
@@ -115,8 +114,8 @@ export default function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Autonomous AI entities with Soul, Mind, and Body — the core
-                    of the Think Agent Standard.
+                    Autonomous AI with Soul, Mind, and Body. The core of the
+                    Think Agent Standard.
                   </p>
                 </CardContent>
               </Card>
@@ -143,8 +142,8 @@ export default function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Deterministic modules that agents call — the verbs of the
-                    system like calculate, fetch, or send.
+                    Modules that agents use to get things done. Calculate,
+                    fetch, send, and more.
                   </p>
                 </CardContent>
               </Card>
@@ -171,8 +170,8 @@ export default function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Complete applications built on Think — from productivity
-                    tools to creative suites.
+                    Full applications built on Think. Productivity tools,
+                    creative suites, and more.
                   </p>
                 </CardContent>
               </Card>
@@ -189,9 +188,9 @@ export default function HomePage() {
               What is User-Owned AI?
             </h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Most AI today is rented — you use it through someone else&apos;s
-              servers, your data feeds their models, and you have no control
-              over how it behaves or evolves.
+              Most AI today is rented. You use it through someone else&apos;s
+              servers, your data feeds their models, and you have no say in how
+              it works or changes.
             </p>
             <p className="text-lg text-muted-foreground mb-4">
               <strong className="text-foreground">User-owned AI is different.</strong>{" "}
@@ -205,7 +204,7 @@ export default function HomePage() {
                 Think Agent Standard
               </a>
               , these agents have verifiable identity, portable memory, and
-              interfaces you control. You own the AI — not the other way around.
+              interfaces you control. You own the AI, not the other way around.
             </p>
             <p className="text-muted-foreground">
               Every project in this directory is built on these principles.

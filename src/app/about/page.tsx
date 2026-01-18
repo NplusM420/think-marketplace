@@ -47,7 +47,7 @@ export default function AboutPage() {
             </p>
             <p className="text-muted-foreground">
               Here you&apos;ll find autonomous agents, developer tools,
-              interfaces, and applications — all built on the open protocol for
+              interfaces, and applications, all built on the open protocol for
               user-owned AI.
             </p>
           </div>
@@ -83,8 +83,8 @@ export default function AboutPage() {
                   Tools
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Deterministic modules that agents call — the verbs of the
-                  system like calculate, fetch, or send.
+                  Modules that agents use to get things done. Calculate, fetch,
+                  send, and more.
                 </p>
               </CardContent>
             </Card>
@@ -98,8 +98,8 @@ export default function AboutPage() {
                   Apps
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Complete applications built on Think — from productivity
-                  suites to creative tools.
+                  Full applications built on Think. Productivity suites,
+                  creative tools, and more.
                 </p>
               </CardContent>
             </Card>
@@ -113,14 +113,14 @@ export default function AboutPage() {
           </h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none mb-8">
             <p className="text-muted-foreground">
-              Each listing shows its &quot;Think Fit&quot; — how it aligns with
-              the three components of the Think Agent Standard:
+              Each listing shows its &quot;Think Fit,&quot; which tells you how
+              it aligns with the three components of the Think Agent Standard:
             </p>
           </div>
           <div className="grid gap-4">
             <div className="rounded-lg border border-border p-4 bg-card">
               <h3 className="font-semibold text-foreground mb-1">
-                Soul — Identity & Ownership
+                Soul: Identity & Ownership
               </h3>
               <p className="text-sm text-muted-foreground">
                 The cryptographic identity and wallet that anchors trust,
@@ -130,17 +130,16 @@ export default function AboutPage() {
             </div>
             <div className="rounded-lg border border-border p-4 bg-card">
               <h3 className="font-semibold text-foreground mb-1">
-                Mind — Reasoning & Coordination
+                Mind: Reasoning & Coordination
               </h3>
               <p className="text-sm text-muted-foreground">
-                The logic and memory that make it intelligent. Where data
-                becomes intelligence — holds context, decision logic, and
-                determines which tools to call.
+                The logic and memory that make it intelligent. Holds context,
+                decision logic, and determines which tools to call.
               </p>
             </div>
             <div className="rounded-lg border border-border p-4 bg-card">
               <h3 className="font-semibold text-foreground mb-1">
-                Body — Interface & Expression
+                Body: Interface & Expression
               </h3>
               <p className="text-sm text-muted-foreground">
                 How the agent interacts with you and the world. The user
@@ -162,8 +161,8 @@ export default function AboutPage() {
                 This is a contributor-only showcase.
               </h3>
               <p className="text-muted-foreground mb-4">
-                To be featured, you need a working project — not just an idea or
-                concept. This keeps the directory credible and ensures visitors
+                To be featured, you need a working project, not just an idea or
+                concept. This keeps the directory credible and helps visitors
                 find real, usable tools.
               </p>
               <p className="text-sm text-muted-foreground mb-4">
@@ -201,8 +200,8 @@ export default function AboutPage() {
               </ul>
               <p className="text-sm text-muted-foreground border-t border-border/50 pt-4">
                 <strong>Note:</strong> &quot;Working&quot; doesn&apos;t mean
-                perfect. Beta projects, MVPs, and experimental tools are all
-                welcome — as long as someone can actually try them.
+                perfect. Beta projects, MVPs, and experiments are all welcome as
+                long as someone can actually try them.
               </p>
             </CardContent>
           </Card>
@@ -273,7 +272,7 @@ export default function AboutPage() {
                     Build something
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Start small — a simple tool, an agent experiment, or even
+                    Start small. A simple tool, an agent experiment, or even
                     documentation improvements. Every contribution counts.
                   </p>
                 </div>

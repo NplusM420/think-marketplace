@@ -255,7 +255,7 @@ Perfect for legal, medical, journalism, and any work where confidentiality matte
 - **CI/CD integration**: Automated checks on every pull request
 - **Custom rules**: Define your team's coding standards
 
-Unlike agents, Code Companion is a deterministic tool — same input always produces the same output.`,
+Unlike agents, Code Companion is a deterministic tool. Same input always produces the same output.`,
     status: "live",
     categories: ["cat-devtools"],
     tags: ["code-review", "refactoring", "developer-tools", "ci-cd"],
@@ -375,7 +375,7 @@ Perfect for market research, competitive analysis, academic work, or satisfying 
     slug: "content-studio",
     type: "app",
     short_description: "All-in-one content creation suite with AI writing, image generation, and publishing tools.",
-    long_description: `Content Studio is your complete content creation toolkit. Write blog posts, generate images, create social media content, and publish across platforms — all from one interface.
+    long_description: `Content Studio is your complete content creation toolkit. Write blog posts, generate images, create social media content, and publish across platforms, all from one interface.
 
 ## Included Tools
 - AI writing assistant with multiple styles
@@ -505,7 +505,7 @@ Stop losing valuable snippets. Clippy remembers everything so you don't have to.
 - **Multi-format export**: From documents to presentations to video scripts
 
 ## For Storytellers
-Writers, marketers, educators, and creators — Story First adapts to your creative process.`,
+Writers, marketers, educators, and creators. Story First adapts to your creative process.`,
     status: "live",
     categories: ["cat-media", "cat-productivity"],
     tags: ["storytelling", "writing", "narrative", "creative"],
