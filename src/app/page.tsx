@@ -43,7 +43,8 @@ export default function HomePage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
               A curated showcase of agents, tools, and apps from the builders
-              shaping user-owned AI.
+              shaping user-owned AI — where you control your AI, your data, and
+              how it works for you.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild>
@@ -176,6 +177,39 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What is User-Owned AI? */}
+      <section className="border-b border-border bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 className="font-body text-2xl font-semibold text-foreground mb-4">
+              What is User-Owned AI?
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Most AI today is rented — you use it through someone else&apos;s
+              servers, your data feeds their models, and you have no control
+              over how it behaves or evolves.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              <strong className="text-foreground">User-owned AI is different.</strong>{" "}
+              Built on the{" "}
+              <a
+                href="https://docs.thinkagents.ai/whitepaper/think-agent-standard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Think Agent Standard
+              </a>
+              , these agents have verifiable identity, portable memory, and
+              interfaces you control. You own the AI — not the other way around.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Every project in this directory is built on these principles.
+            </p>
           </div>
         </div>
       </section>

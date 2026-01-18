@@ -712,3 +712,571 @@
 2026-01-18T02:05:39.111062Z  INFO get_files: tailwindcss_oxide::scanner: exit
 2026-01-18T02:05:39.111331Z  INFO get_globs: tailwindcss_oxide::scanner: enter
 2026-01-18T02:05:39.111355Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.568379Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-01-18T21:24:12.570321Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "/Users/zachmcnair/repos/think/think-marketplace", pattern: "**/*", negated: false }
+2026-01-18T21:24:12.570401Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-01-18T21:24:12.570413Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "/Users/zachmcnair/repos/think/think-marketplace" }
+2026-01-18T21:24:12.570496Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.571221Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/postcss.config.mjs"
+2026-01-18T21:24:12.575085Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/README.md"
+2026-01-18T21:24:12.575160Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:24:12.575218Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/thinkos-grey.svg"
+2026-01-18T21:24:12.575245Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/file.svg"
+2026-01-18T21:24:12.575263Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-directory-homepage-copy.html"
+2026-01-18T21:24:12.575278Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-brainfist-light-mode.svg"
+2026-01-18T21:24:12.575291Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-brainfist-darkmode-mode.svg"
+2026-01-18T21:24:12.575310Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-marketplace-wordmark-light-mode.svg"
+2026-01-18T21:24:12.576403Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/vercel.svg"
+2026-01-18T21:24:12.576487Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/next.svg"
+2026-01-18T21:24:12.576854Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/globe.svg"
+2026-01-18T21:24:12.584636Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/window.svg"
+2026-01-18T21:24:12.588125Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-marketplace-wordmark-dark-mode.svg"
+2026-01-18T21:24:12.589741Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-marketplace-wordmark-dark-mode-white.svg"
+2026-01-18T21:24:12.595518Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/package.json"
+2026-01-18T21:24:12.595563Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/components.json"
+2026-01-18T21:24:12.601793Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/tsconfig.json"
+2026-01-18T21:24:12.608359Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/eslint.config.mjs"
+2026-01-18T21:24:12.614596Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/next.config.ts"
+2026-01-18T21:24:12.614687Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:24:12.614771Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:24:12.614894Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types/index.ts"
+2026-01-18T21:24:12.619502Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:24:12.627044Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:24:12.632906Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit/page.tsx"
+2026-01-18T21:24:12.638396Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/icon.svg"
+2026-01-18T21:24:12.638552Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:24:12.646078Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about/page.tsx"
+2026-01-18T21:24:12.649539Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/layout.tsx"
+2026-01-18T21:24:12.649674Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:24:12.650245Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse/page.tsx"
+2026-01-18T21:24:12.650377Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:24:12.650600Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:24:12.651487Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]/page.tsx"
+2026-01-18T21:24:12.652034Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:24:12.656551Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:24:12.656700Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]/page.tsx"
+2026-01-18T21:24:12.656984Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/page.tsx"
+2026-01-18T21:24:12.657026Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/globals.css"
+2026-01-18T21:24:12.657059Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/not-found.tsx"
+2026-01-18T21:24:12.657132Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:24:12.657174Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/theme-provider.tsx"
+2026-01-18T21:24:12.657221Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:24:12.657260Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/tabs.tsx"
+2026-01-18T21:24:12.657275Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/card.tsx"
+2026-01-18T21:24:12.657291Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/sheet.tsx"
+2026-01-18T21:24:12.657308Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/label.tsx"
+2026-01-18T21:24:12.657325Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/command.tsx"
+2026-01-18T21:24:12.657340Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/avatar.tsx"
+2026-01-18T21:24:12.657353Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/dialog.tsx"
+2026-01-18T21:24:12.657366Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/badge.tsx"
+2026-01-18T21:24:12.657379Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/separator.tsx"
+2026-01-18T21:24:12.657392Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/button.tsx"
+2026-01-18T21:24:12.657406Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/dropdown-menu.tsx"
+2026-01-18T21:24:12.657420Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/select.tsx"
+2026-01-18T21:24:12.657432Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/textarea.tsx"
+2026-01-18T21:24:12.657445Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/input.tsx"
+2026-01-18T21:24:12.657460Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/skeleton.tsx"
+2026-01-18T21:24:12.657473Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/carousel.tsx"
+2026-01-18T21:24:12.657544Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:24:12.657588Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/index.tsx"
+2026-01-18T21:24:12.657607Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/footer.tsx"
+2026-01-18T21:24:12.657631Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/header.tsx"
+2026-01-18T21:24:12.657648Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/listing-card.tsx"
+2026-01-18T21:24:12.657661Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/theme-toggle.tsx"
+2026-01-18T21:24:12.657675Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/featured-carousel.tsx"
+2026-01-18T21:24:12.657738Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:24:12.657783Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/utils.ts"
+2026-01-18T21:24:12.658139Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:24:12.658219Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase/schema.sql"
+2026-01-18T21:24:12.658237Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase/client.ts"
+2026-01-18T21:24:12.658261Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase/server.ts"
+2026-01-18T21:24:12.658316Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:24:12.658345Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data/seed.ts"
+2026-01-18T21:24:12.658436Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.658462Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.658532Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.658568Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 57 file(s)
+2026-01-18T21:24:12.658793Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/package.json"
+2026-01-18T21:24:12.658816Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/not-found.tsx"
+2026-01-18T21:24:12.658913Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/icon.svg"
+2026-01-18T21:24:12.658942Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/postcss.config.mjs"
+2026-01-18T21:24:12.658976Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/theme-provider.tsx"
+2026-01-18T21:24:12.659086Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/components.json"
+2026-01-18T21:24:12.659101Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-marketplace-wordmark-light-mode.svg"
+2026-01-18T21:24:12.659163Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/listing-card.tsx"
+2026-01-18T21:24:12.659175Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/textarea.tsx"
+2026-01-18T21:24:12.659210Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/tsconfig.json"
+2026-01-18T21:24:12.659238Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/file.svg"
+2026-01-18T21:24:12.659138Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/thinkos-grey.svg"
+2026-01-18T21:24:12.659300Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/vercel.svg"
+2026-01-18T21:24:12.659198Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/README.md"
+2026-01-18T21:24:12.659312Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse/page.tsx"
+2026-01-18T21:24:12.658995Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/about/page.tsx"
+2026-01-18T21:24:12.659389Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase/schema.sql"
+2026-01-18T21:24:12.659412Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]/page.tsx"
+2026-01-18T21:24:12.659425Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/next.svg"
+2026-01-18T21:24:12.659446Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/layout.tsx"
+2026-01-18T21:24:12.659213Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/eslint.config.mjs"
+2026-01-18T21:24:12.659504Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/featured-carousel.tsx"
+2026-01-18T21:24:12.659514Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]/page.tsx"
+2026-01-18T21:24:12.659446Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase/client.ts"
+2026-01-18T21:24:12.659593Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/page.tsx"
+2026-01-18T21:24:12.659615Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/tabs.tsx"
+2026-01-18T21:24:12.659653Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data/seed.ts"
+2026-01-18T21:24:12.659524Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-directory-homepage-copy.html"
+2026-01-18T21:24:12.659204Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/theme-toggle.tsx"
+2026-01-18T21:24:12.659601Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase/server.ts"
+2026-01-18T21:24:12.659783Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/next.config.ts"
+2026-01-18T21:24:12.659741Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/globe.svg"
+2026-01-18T21:24:12.659877Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/footer.tsx"
+2026-01-18T21:24:12.659891Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/lib/utils.ts"
+2026-01-18T21:24:12.659930Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/header.tsx"
+2026-01-18T21:24:12.659973Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/index.tsx"
+2026-01-18T21:24:12.659798Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/types/index.ts"
+2026-01-18T21:24:12.660159Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit/page.tsx"
+2026-01-18T21:24:12.660339Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-marketplace-wordmark-dark-mode.svg"
+2026-01-18T21:24:12.659838Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-brainfist-light-mode.svg"
+2026-01-18T21:24:12.659751Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/input.tsx"
+2026-01-18T21:24:12.660506Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/skeleton.tsx"
+2026-01-18T21:24:12.660532Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-brainfist-darkmode-mode.svg"
+2026-01-18T21:24:12.660079Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/separator.tsx"
+2026-01-18T21:24:12.660112Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/card.tsx"
+2026-01-18T21:24:12.660064Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/carousel.tsx"
+2026-01-18T21:24:12.660699Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/dialog.tsx"
+2026-01-18T21:24:12.660735Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/button.tsx"
+2026-01-18T21:24:12.660315Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/window.svg"
+2026-01-18T21:24:12.660383Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-marketplace-wordmark-dark-mode-white.svg"
+2026-01-18T21:24:12.660811Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/dropdown-menu.tsx"
+2026-01-18T21:24:12.660959Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/label.tsx"
+2026-01-18T21:24:12.660575Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/badge.tsx"
+2026-01-18T21:24:12.660702Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/select.tsx"
+2026-01-18T21:24:12.661070Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/sheet.tsx"
+2026-01-18T21:24:12.659621Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/avatar.tsx"
+2026-01-18T21:24:12.661126Z  INFO tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui/command.tsx"
+2026-01-18T21:24:12.666564Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.666597Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.666603Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.670853Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.670885Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.670895Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.670901Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:24:12.670984Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/globals.css"
+2026-01-18T21:24:12.670996Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.671001Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.671006Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.671097Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.671123Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.672108Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.673337Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.673360Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.674324Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:24:12.674695Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:24:12.674747Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:24:12.674805Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:24:12.674870Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:24:12.674966Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:24:12.675026Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:24:12.675079Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:24:12.675122Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:24:12.675175Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:24:12.675217Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:24:12.675292Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:24:12.675356Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:24:12.675502Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:24:12.675581Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:24:12.675627Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:24:12.675688Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:24:12.675737Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.675922Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.676060Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.676094Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:24:12.677443Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:24:12.677671Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:24:12.677720Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:24:12.677771Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:24:12.677817Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:24:12.677872Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:24:12.677924Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:24:12.677974Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:24:12.678016Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:24:12.678064Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:24:12.678102Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:24:12.678166Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:24:12.678217Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:24:12.678343Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:24:12.678421Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:24:12.678466Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:24:12.678525Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:24:12.678602Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:24:12.681573Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.548664Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.549534Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:44:40.549851Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:44:40.550067Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:44:40.550166Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:44:40.550234Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:44:40.550313Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:44:40.550387Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:44:40.550455Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:44:40.550515Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:44:40.550581Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:44:40.550635Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:44:40.550670Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/page.tsx"
+2026-01-18T21:44:40.550725Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:44:40.550791Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:44:40.550944Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:44:40.551030Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:44:40.551085Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:44:40.551154Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:44:40.551203Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.551210Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.551215Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.551219Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:44:40.551250Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/page.tsx"
+2026-01-18T21:44:40.551264Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.551268Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.551272Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.551497Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.551531Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.551711Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.552203Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.552212Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.552771Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:44:40.552964Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:44:40.553006Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:44:40.553055Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:44:40.553100Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:44:40.553153Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:44:40.553204Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:44:40.553249Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:44:40.553289Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:44:40.553335Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:44:40.553372Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:44:40.553432Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:44:40.553480Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:44:40.553607Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:44:40.553678Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:44:40.553721Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:44:40.553776Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:44:40.553818Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.553913Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:40.554009Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:40.554015Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.410558Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.411262Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:44:52.411638Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:44:52.411726Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:44:52.411793Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:44:52.411853Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:44:52.411927Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:44:52.411995Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:44:52.412053Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:44:52.412105Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:44:52.412163Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:44:52.412210Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:44:52.412241Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/page.tsx"
+2026-01-18T21:44:52.412293Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:44:52.412358Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:44:52.412502Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:44:52.412588Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:44:52.412645Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:44:52.412715Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:44:52.412767Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.412775Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.412779Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.412782Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:44:52.412816Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/page.tsx"
+2026-01-18T21:44:52.412831Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.412835Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.412839Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.413844Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.413885Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.414064Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.414775Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.414815Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.415438Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:44:52.415694Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:44:52.415760Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:44:52.415825Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:44:52.415883Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:44:52.415952Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:44:52.416021Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:44:52.416081Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:44:52.416149Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:44:52.416211Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:44:52.416260Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:44:52.416340Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:44:52.416414Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:44:52.416577Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:44:52.416674Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:44:52.416732Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:44:52.416810Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:44:52.416866Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.417075Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:44:52.417183Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:44:52.417193Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.705832Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.706538Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:45:19.706770Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:45:19.706827Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:45:19.706890Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:45:19.706946Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:45:19.707012Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:45:19.707039Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about/page.tsx"
+2026-01-18T21:45:19.707105Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:45:19.707183Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:45:19.707235Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:45:19.707294Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:45:19.707402Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:45:19.707478Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:45:19.707538Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:45:19.707695Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:45:19.707783Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:45:19.707838Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:45:19.707909Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:45:19.707958Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.707965Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.707970Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.707974Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:45:19.708007Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/about/page.tsx"
+2026-01-18T21:45:19.708015Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.708019Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.708024Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.709524Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.709575Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.709936Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.710482Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.710496Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.711142Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:45:19.711352Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:45:19.711399Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:45:19.711454Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:45:19.711503Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:45:19.711561Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:45:19.711619Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:45:19.711670Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:45:19.711714Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:45:19.711764Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:45:19.711803Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:45:19.711868Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:45:19.711919Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:45:19.712290Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:45:19.712427Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:45:19.712487Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:45:19.712557Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:45:19.712614Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.712691Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:19.712890Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:19.712902Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.811768Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.812433Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:45:27.812494Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public/think-directory-homepage-copy.html"
+2026-01-18T21:45:27.812653Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:45:27.812699Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:45:27.812753Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:45:27.812801Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:45:27.812862Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:45:27.812918Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:45:27.812969Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:45:27.813012Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:45:27.813061Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:45:27.813100Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:45:27.813165Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:45:27.813215Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:45:27.813350Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:45:27.813429Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:45:27.813477Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:45:27.813536Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:45:27.813588Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.813595Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.813600Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.813604Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:45:27.813638Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/public/think-directory-homepage-copy.html"
+2026-01-18T21:45:27.813646Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.813651Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.813655Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.814197Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.814219Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.814464Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.815022Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.815042Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.815720Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:45:27.815948Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:45:27.815999Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:45:27.816055Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:45:27.816104Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:45:27.816164Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:45:27.816223Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:45:27.816275Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:45:27.816319Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:45:27.816369Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:45:27.816409Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:45:27.816475Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:45:27.816528Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:45:27.816671Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:45:27.816751Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:45:27.816798Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:45:27.816860Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:45:27.816908Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.817152Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:45:27.817266Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:45:27.817304Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.938904Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.939558Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:46:44.939774Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:46:44.939835Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:46:44.939887Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:46:44.939947Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:46:44.940017Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:46:44.940044Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about/page.tsx"
+2026-01-18T21:46:44.940080Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:46:44.940128Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:46:44.940170Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:46:44.940219Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:46:44.940257Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:46:44.940320Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:46:44.940368Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:46:44.940496Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:46:44.940570Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:46:44.940616Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:46:44.940673Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:46:44.940717Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.940727Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.940732Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.940736Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:46:44.940764Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/app/about/page.tsx"
+2026-01-18T21:46:44.940770Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.940775Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.940779Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.944989Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.945035Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.945184Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.945744Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.945755Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.946308Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:46:44.946501Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:46:44.946545Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:46:44.946593Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:46:44.946637Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:46:44.946690Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:46:44.946755Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:46:44.946801Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:46:44.946842Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:46:44.946889Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:46:44.946928Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:46:44.946990Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:46:44.947038Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:46:44.947163Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:46:44.947235Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:46:44.947282Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:46:44.947339Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:46:44.947381Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.947515Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:44.947630Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:44.947639Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.642100Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.642787Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:46:55.643029Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:46:55.643089Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:46:55.643156Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:46:55.643216Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:46:55.643291Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:46:55.643366Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:46:55.643429Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:46:55.643486Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:46:55.643551Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:46:55.643602Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:46:55.643692Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:46:55.643820Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:46:55.644024Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:46:55.644066Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/footer.tsx"
+2026-01-18T21:46:55.644128Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:46:55.644180Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:46:55.644249Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:46:55.644306Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.644315Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.644321Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.644326Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:46:55.644361Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/footer.tsx"
+2026-01-18T21:46:55.644371Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.644376Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.644381Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.645447Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.645490Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.646320Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.646981Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.646998Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.647849Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:46:55.648152Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:46:55.648216Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:46:55.648281Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:46:55.648352Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:46:55.648427Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:46:55.648490Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:46:55.648562Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:46:55.648613Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:46:55.648675Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:46:55.648723Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:46:55.648796Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:46:55.648854Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:46:55.648997Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:46:55.649080Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:46:55.649132Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:46:55.649197Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:46:55.658216Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.676783Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:46:55.677005Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:46:55.677347Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.753344Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.754027Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:47:00.754244Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:47:00.754291Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:47:00.754345Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:47:00.754392Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:47:00.754450Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:47:00.754508Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:47:00.754558Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:47:00.754607Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:47:00.754660Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:47:00.754700Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:47:00.754766Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:47:00.754817Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:47:00.755122Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:47:00.755244Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/footer.tsx"
+2026-01-18T21:47:00.755349Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:47:00.755412Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:47:00.755482Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:47:00.755537Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.755546Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.755552Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.755556Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-01-18T21:47:00.755591Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout/footer.tsx"
+2026-01-18T21:47:00.755599Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.755603Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.755608Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.755885Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.755905Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.755970Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.756545Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.756576Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.757177Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/public"
+2026-01-18T21:47:00.757367Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src"
+2026-01-18T21:47:00.757408Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/types"
+2026-01-18T21:47:00.757456Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app"
+2026-01-18T21:47:00.757505Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/submit"
+2026-01-18T21:47:00.757557Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/about"
+2026-01-18T21:47:00.757609Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/browse"
+2026-01-18T21:47:00.757654Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing"
+2026-01-18T21:47:00.757694Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/listing/[slug]"
+2026-01-18T21:47:00.757740Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder"
+2026-01-18T21:47:00.757776Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/app/builder/[slug]"
+2026-01-18T21:47:00.757835Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components"
+2026-01-18T21:47:00.757882Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/ui"
+2026-01-18T21:47:00.758001Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/components/layout"
+2026-01-18T21:47:00.758070Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib"
+2026-01-18T21:47:00.758112Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/supabase"
+2026-01-18T21:47:00.758169Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/zachmcnair/repos/think/think-marketplace/src/lib/data"
+2026-01-18T21:47:00.758212Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.758311Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-01-18T21:47:00.758441Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-01-18T21:47:00.758454Z  INFO get_globs: tailwindcss_oxide::scanner: exit

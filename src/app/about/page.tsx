@@ -162,45 +162,143 @@ export default function AboutPage() {
                 This is a contributor-only showcase.
               </h3>
               <p className="text-muted-foreground mb-4">
-                To be featured in v1, you must contribute something concrete to
-                the Think ecosystem. This keeps the surface credible and the
-                community invested.
+                To be featured, you need a working project — not just an idea or
+                concept. This keeps the directory credible and ensures visitors
+                find real, usable tools.
               </p>
               <p className="text-sm text-muted-foreground mb-4">
-                <strong>&quot;Contribute&quot;</strong> means one of:
+                <strong>What counts as a contribution:</strong>
               </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>Build:</strong> FE component, API route, schema, or
-                    integration
+                    <strong>Ship a project:</strong> An agent, tool, or app
+                    that&apos;s live and usable (even if in beta)
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>UX:</strong> Flows, wireframes, UI kit, or layout
-                    system
+                    <strong>Build infrastructure:</strong> Components, APIs, or
+                    integrations others can use
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>Content:</strong> Listing template, taxonomy, or
-                    Think framing copy
+                    <strong>Design systems:</strong> UX flows, wireframes, or UI
+                    kits for the ecosystem
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>Ops:</strong> Documentation, contributor onboarding,
-                    or QA checklist
+                    <strong>Create content:</strong> Documentation, tutorials,
+                    or guides that help others build
                   </span>
                 </li>
               </ul>
+              <p className="text-sm text-muted-foreground border-t border-border/50 pt-4">
+                <strong>Note:</strong> &quot;Working&quot; doesn&apos;t mean
+                perfect. Beta projects, MVPs, and experimental tools are all
+                welcome — as long as someone can actually try them.
+              </p>
             </CardContent>
           </Card>
+        </section>
+
+        {/* How to Get Started */}
+        <section id="get-started" className="mb-16 scroll-mt-20">
+          <h2 className="font-body text-2xl font-semibold text-foreground mb-6">
+            How to Get Started
+          </h2>
+          <div className="grid gap-4">
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  1
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Learn the basics
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Read the{" "}
+                    <a
+                      href="https://docs.thinkagents.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Think documentation
+                    </a>{" "}
+                    to understand the Agent Standard and how Soul, Mind, and
+                    Body work together.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  2
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Join the community
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Connect with other builders in the{" "}
+                    <a
+                      href="https://discord.gg/thinkagents"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Think Discord
+                    </a>
+                    . Ask questions, share ideas, and find collaborators.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  3
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Build something
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Start small — a simple tool, an agent experiment, or even
+                    documentation improvements. Every contribution counts.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  4
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Submit your project
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Once you have something working,{" "}
+                    <Link href="/submit" className="text-primary hover:underline">
+                      submit it to the directory
+                    </Link>
+                    . Our team will review it and help you get featured.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA */}
