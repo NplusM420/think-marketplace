@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
@@ -38,6 +38,8 @@ export function FeaturedCarousel({ listings }: FeaturedCarouselProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [imageHeight, setImageHeight] = useState(0);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -61,6 +63,18 @@ export function FeaturedCarousel({ listings }: FeaturedCarouselProps) {
     };
   }, [emblaApi, onSelect]);
 
+  // Measure image height for arrow positioning
+  useEffect(() => {
+    const updateHeight = () => {
+      if (imageRef.current) {
+        setImageHeight(imageRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
   if (listings.length === 0) return null;
 
   return (
@@ -68,7 +82,7 @@ export function FeaturedCarousel({ listings }: FeaturedCarouselProps) {
       {/* Carousel */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex -ml-4">
-          {listings.map((listing) => {
+          {listings.map((listing, index) => {
             const TypeIcon = typeIcons[listing.type];
             const iconSrc = listing.icon_url || DEFAULT_ICON;
 
@@ -83,16 +97,19 @@ export function FeaturedCarousel({ listings }: FeaturedCarouselProps) {
                 >
                   <div className="flex flex-col h-full">
                     {/* Image - separate, above */}
-                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-md border border-border/50 mb-4">
+                    <div 
+                      ref={index === 0 ? imageRef : undefined}
+                      className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-md border border-border/50 mb-4"
+                    >
                       {listing.thumbnail_url ? (
                         <Image
                           src={listing.thumbnail_url}
                           alt={`${listing.name} preview`}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:opacity-85"
                         />
                       ) : (
-                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted via-muted/80 to-muted/60">
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted via-muted/80 to-muted/60 transition-opacity duration-300 group-hover:opacity-85">
                           <Image
                             src={iconSrc}
                             alt=""
@@ -150,15 +167,16 @@ export function FeaturedCarousel({ listings }: FeaturedCarouselProps) {
         </div>
       </div>
 
-      {/* Navigation arrows */}
+      {/* Navigation arrows - centered with the image area */}
       <Button
         variant="outline"
         size="icon"
         className={cn(
-          "absolute -left-4 top-[20%] -translate-y-1/2 z-20 rounded-full bg-background shadow-lg border-border",
+          "absolute -left-4 z-20 rounded-full bg-background shadow-lg border-border -translate-y-1/2",
           "hidden sm:flex",
           !canScrollPrev && "opacity-50 cursor-not-allowed"
         )}
+        style={{ top: imageHeight ? `${imageHeight / 2}px` : '80px' }}
         onClick={scrollPrev}
         disabled={!canScrollPrev}
         aria-label="Previous slide"
@@ -169,10 +187,11 @@ export function FeaturedCarousel({ listings }: FeaturedCarouselProps) {
         variant="outline"
         size="icon"
         className={cn(
-          "absolute -right-4 top-[20%] -translate-y-1/2 z-20 rounded-full bg-background shadow-lg border-border",
+          "absolute -right-4 z-20 rounded-full bg-background shadow-lg border-border -translate-y-1/2",
           "hidden sm:flex",
           !canScrollNext && "opacity-50 cursor-not-allowed"
         )}
+        style={{ top: imageHeight ? `${imageHeight / 2}px` : '80px' }}
         onClick={scrollNext}
         disabled={!canScrollNext}
         aria-label="Next slide"
