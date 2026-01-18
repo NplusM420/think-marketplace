@@ -9,7 +9,7 @@ import { FeaturedCarousel } from "@/components/featured-carousel";
 import { fetchFeaturedListings, fetchListings, fetchCategories } from "@/lib/api";
 import type { Listing } from "@/types";
 
-export const revalidate = 60; // Revalidate every minute
+export const dynamic = 'force-dynamic' // Fetch fresh data on each request
 
 export default async function HomePage() {
   // Fetch data from API

@@ -9,7 +9,7 @@ import { ListingCard } from "@/components/listing-card";
 import { fetchBuilder } from "@/lib/api";
 import type { Builder, Listing } from "@/types";
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({
   params,

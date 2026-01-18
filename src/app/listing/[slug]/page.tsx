@@ -27,7 +27,7 @@ import { ListingCard } from "@/components/listing-card";
 import { cn } from "@/lib/utils";
 import type { Listing } from "@/types";
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic'
 
 const typeIcons = {
   agent: Bot,

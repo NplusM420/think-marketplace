@@ -1,15 +1,13 @@
-Feedback notes:
+copy /mise/installs
+709ms
 
-In the section headers, it prefers things like “New & Notable” over “Fresh Drops” without saying why - is that a hunch?
+pnpm install --frozen-lockfile --prefer-offline
+420ms
+ ERR_PNPM_OUTDATED_LOCKFILE  Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with <ROOT>/package.json
+Note that in CI environments this setting is true by default. If you still need to run install in such cases, use "pnpm install --no-frozen-lockfile"
+    Failure reason:
+    specifiers in the lockfile ({"@radix-ui/react-avatar":"^1.1.11","@radix-ui/react-dialog":"^1.1.15","@radix-ui/react-dropdown-menu":"^2.1.16","@radix-ui/react-label":"^2.1.8","@radix-ui/react-select":"^2.2.6","@radix-ui/react-separator":"^1.1.8","@radix-ui/react-slot":"^1.2.4","@radix-ui/react-tabs":"^1.1.13","@supabase/ssr":"^0.8.0","@supabase/supabase-js":"^2.90.1","class-variance-authority":"^0.7.1","clsx":"^2.1.1","cmdk":"^1.1.1","embla-carousel-autoplay":"^8.6.0","embla-carousel-react":"^8.6.0","lucide-react":"^0.562.0","next":"16.1.3","next-themes":"^0.4.6","react":"19.2.3","react-dom":"19.2.3","tailwind-merge":"^3.4.0","@tailwindcss/postcss":"^4","@types/node":"^20","@types/react":"^19","@types/react-dom":"^19","eslint":"^9","eslint-config-next":"16.1.3","tailwindcss":"^4","tw-animate-css":"^1.4.0","typescript":"^5"}) don't match specs in package.json ({"@tailwindcss/postcss":"^4","@types/node":"^20","@types/react":"^19","@types/react-dom":"^19","eslint":"^9","eslint-config-next":"16.1.3","tailwindcss":"^4","tsx":"^4.21.0","tw-animate-css":"^1.4.0","typescript":"^5","@aws-sdk/client-s3":"^3.971.0","@prisma/client":"^5.22.0","@privy-io/node":"^0.7.0","@privy-io/react-auth":"^3.11.0","@radix-ui/react-avatar":"^1.1.11","@radix-ui/react-dialog":"^1.1.15","@radix-ui/react-dropdown-menu":"^2.1.16","@radix-ui/react-label":"^2.1.8","@radix-ui/react-select":"^2.2.6","@radix-ui/react-separator":"^1.1.8","@radix-ui/react-slot":"^1.2.4","@radix-ui/react-tabs":"^1.1.13","@supabase/ssr":"^0.8.0","@supabase/supabase-js":"^2.90.1","class-variance-authority":"^0.7.1","clsx":"^2.1.1","cmdk":"^1.1.1","dotenv":"^17.2.3","embla-carousel-autoplay":"^8.6.0","embla-carousel-react":"^8.6.0","lucide-react":"^0.562.0","next":"16.1.3","next-themes":"^0.4.6","prisma":"^5.22.0","react":"19.2.3","react-dom":"19.2.3","tailwind-merge":"^3.4.0","viem":"^2.44.4"})
 
-Overall it’s clean, modular, and I like the mix-and-match. The tones range from community-focused to punchy, and I like how the V1 pick (discovery-forward) starts broad while leaving room to add builders later. 
-
-On the flip side, I feel some headlines and taglines don’t quite sync or leave holes, especially for newbies who might not get ‘AI You Own’ or don’t understand the whole Think vibe. 
-
-The headline options give solid variety, but what are ‘Bodies’? I dont get the reference.
-
-Subheads might assume people already know what ‘user-owned AI’ is? 
-
-The about section contrasts casual vs. polished well, but both could explain contributor guidelines more clearly to make it feel less like gatekeeping…
-
-e.g. Phrases like “You’ll need to contribute something real” (Option A) or “builders must actively participate in the Think community” (Option B) are motivational on the surface, but they’re pretty vague. What counts as “real” or “active”? Is it code commits, Discord posts, actual apps being published, or something else? Without spelling out examples or linking to clear guidelines (e.g., “Check our contributor docs for ways to get started”), it might come across like the community has unspoken rules that only OGs know and which might scare off potential contributors who aren’t sure if they qualify?
+copy /usr/local/bin/mise, /etc/mise/config.toml, /root/.local/state/mise
+182ms
+ERROR: failed to build: failed to solve: process "pnpm install --frozen-lockfile --prefer-offline" did not complete successfully: exit code: 1

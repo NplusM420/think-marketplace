@@ -15,7 +15,9 @@
       "Bash(timeout 15 npm run dev:*)",
       "Bash(pkill:*)",
       "Bash(jq:*)",
-      "Bash(openssl rand:*)"
+      "Bash(openssl rand:*)",
+      "Bash(npm run build:*)",
+      "Bash(pnpm install:*)"
     ]
   }
 }
