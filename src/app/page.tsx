@@ -183,17 +183,17 @@ export default function HomePage() {
 
       {/* What is User-Owned AI? */}
       <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-body text-2xl font-semibold text-foreground mb-4">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-heading text-3xl tracking-tight text-foreground sm:text-4xl mb-6">
               What is User-Owned AI?
             </h2>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Most AI today is rented — you use it through someone else&apos;s
               servers, your data feeds their models, and you have no control
               over how it behaves or evolves.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               <strong className="text-foreground">User-owned AI is different.</strong>{" "}
               Built on the{" "}
               <a
@@ -207,7 +207,7 @@ export default function HomePage() {
               , these agents have verifiable identity, portable memory, and
               interfaces you control. You own the AI — not the other way around.
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground">
               Every project in this directory is built on these principles.
             </p>
           </div>
@@ -275,12 +275,12 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary/5 via-transparent to-primary/10">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="text-center">
-            <h2 className="font-body text-3xl font-semibold text-foreground mb-4">
+            <h2 className="font-heading text-3xl tracking-tight text-foreground sm:text-4xl mb-6">
               Building on Think?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Submit your project to the Think Marketplace. Get discovered by
               users and builders in the Think ecosystem.
             </p>
