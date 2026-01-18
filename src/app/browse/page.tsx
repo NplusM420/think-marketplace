@@ -315,9 +315,9 @@ function BrowseContent() {
               <div className="mt-6 space-y-6">
                 {/* Type */}
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
+                  <p className="text-sm font-medium text-foreground mb-2">
                     Type
-                  </label>
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {typeFilters.map((filter) => {
                       const Icon = filter.icon;
@@ -341,9 +341,9 @@ function BrowseContent() {
 
                 {/* Status */}
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
+                  <p className="text-sm font-medium text-foreground mb-2">
                     Status
-                  </label>
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {statusFilters.map((filter) => (
                       <Button
@@ -362,9 +362,9 @@ function BrowseContent() {
 
                 {/* Category */}
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
+                  <p className="text-sm font-medium text-foreground mb-2">
                     Category
-                  </label>
+                  </p>
                   <Select value={selectedCategory || "all"} onValueChange={(v) => setSelectedCategory(v === "all" ? "" : v)}>
                     <SelectTrigger>
                       <SelectValue placeholder="All Categories" />
@@ -382,9 +382,9 @@ function BrowseContent() {
 
                 {/* Sort */}
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
+                  <p className="text-sm font-medium text-foreground mb-2">
                     Sort by
-                  </label>
+                  </p>
                   <Select value={sortBy} onValueChange={setSortBy}>
                     <SelectTrigger>
                       <SelectValue placeholder="Sort by" />

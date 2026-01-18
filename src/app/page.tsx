@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Bot, Wrench, AppWindow, Sparkles } from "lucide-react";
+import { ArrowRight, Bot, Wrench, AppWindow } from "lucide-react";
 
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
@@ -49,8 +49,8 @@ export default async function HomePage() {
               <span className="text-primary">Think</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              A curated showcase of agents, tools, and apps from the builders
-              shaping user-owned AI.
+              Agents, tools, and apps from builders creating AI you actually
+              own. Your AI, your data, your rules.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild>
@@ -72,15 +72,9 @@ export default async function HomePage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-3">
-                <Sparkles
-                  className="h-5 w-5 text-primary"
-                  aria-hidden="true"
-                />
-                <h2 className="font-body text-2xl font-semibold text-foreground">
-                  Featured
-                </h2>
-              </div>
+              <h2 className="font-body text-2xl font-semibold text-foreground">
+                Featured
+              </h2>
               <Link
                 href="/browse?visibility=featured"
                 className="text-sm text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md"
@@ -121,8 +115,8 @@ export default async function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Autonomous AI entities with Soul, Mind, and Body — the core
-                    of the Think Agent Standard.
+                    Autonomous AI with Soul, Mind, and Body. The core of the
+                    Think Agent Standard.
                   </p>
                 </CardContent>
               </Card>
@@ -149,8 +143,8 @@ export default async function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Deterministic modules that agents call — the verbs of the
-                    system like calculate, fetch, or send.
+                    Modules that agents use to get things done. Calculate,
+                    fetch, send, and more.
                   </p>
                 </CardContent>
               </Card>
@@ -177,12 +171,45 @@ export default async function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Complete applications built on Think — from productivity
-                    tools to creative suites.
+                    Full applications built on Think. Productivity tools,
+                    creative suites, and more.
                   </p>
                 </CardContent>
               </Card>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What is User-Owned AI? */}
+      <section className="border-b border-border bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl mb-6">
+              What is User-Owned AI?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              Most AI today is rented. You use it through someone else&apos;s
+              servers, your data feeds their models, and you have no say in how
+              it works or changes.
+            </p>
+            <p className="text-lg text-muted-foreground mb-4">
+              <strong className="text-foreground">User-owned AI is different.</strong>{" "}
+              Built on the{" "}
+              <a
+                href="https://docs.thinkagents.ai/whitepaper/think-agent-standard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Think Agent Standard
+              </a>
+              , these agents have verifiable identity, portable memory, and
+              interfaces you control. You own the AI, not the other way around.
+            </p>
+            <p className="text-muted-foreground">
+              Every project in this directory is built on these principles.
+            </p>
           </div>
         </div>
       </section>
@@ -248,12 +275,12 @@ export default async function HomePage() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary/5 via-transparent to-primary/10">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="text-center">
-            <h2 className="font-body text-3xl font-semibold text-foreground mb-4">
+            <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl mb-6">
               Building on Think?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Submit your project to the Think Marketplace. Get discovered by
               users and builders in the Think ecosystem.
             </p>

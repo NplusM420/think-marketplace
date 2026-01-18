@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="font-heading text-4xl text-foreground mb-4">
+          <h1 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-6">
             About Think Marketplace
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -47,7 +47,7 @@ export default function AboutPage() {
             </p>
             <p className="text-muted-foreground">
               Here you&apos;ll find autonomous agents, developer tools,
-              interfaces, and applications — all built on the open protocol for
+              interfaces, and applications, all built on the open protocol for
               user-owned AI.
             </p>
           </div>
@@ -83,8 +83,8 @@ export default function AboutPage() {
                   Tools
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Deterministic modules that agents call — the verbs of the
-                  system like calculate, fetch, or send.
+                  Modules that agents use to get things done. Calculate, fetch,
+                  send, and more.
                 </p>
               </CardContent>
             </Card>
@@ -98,8 +98,8 @@ export default function AboutPage() {
                   Apps
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Complete applications built on Think — from productivity
-                  suites to creative tools.
+                  Full applications built on Think. Productivity suites,
+                  creative tools, and more.
                 </p>
               </CardContent>
             </Card>
@@ -113,14 +113,14 @@ export default function AboutPage() {
           </h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none mb-8">
             <p className="text-muted-foreground">
-              Each listing shows its &quot;Think Fit&quot; — how it aligns with
-              the three components of the Think Agent Standard:
+              Each listing shows its &quot;Think Fit,&quot; which tells you how
+              it aligns with the three components of the Think Agent Standard:
             </p>
           </div>
           <div className="grid gap-4">
             <div className="rounded-lg border border-border p-4 bg-card">
               <h3 className="font-semibold text-foreground mb-1">
-                Soul — Identity & Ownership
+                Soul: Identity & Ownership
               </h3>
               <p className="text-sm text-muted-foreground">
                 The cryptographic identity and wallet that anchors trust,
@@ -130,17 +130,16 @@ export default function AboutPage() {
             </div>
             <div className="rounded-lg border border-border p-4 bg-card">
               <h3 className="font-semibold text-foreground mb-1">
-                Mind — Reasoning & Coordination
+                Mind: Reasoning & Coordination
               </h3>
               <p className="text-sm text-muted-foreground">
-                The logic and memory that make it intelligent. Where data
-                becomes intelligence — holds context, decision logic, and
-                determines which tools to call.
+                The logic and memory that make it intelligent. Holds context,
+                decision logic, and determines which tools to call.
               </p>
             </div>
             <div className="rounded-lg border border-border p-4 bg-card">
               <h3 className="font-semibold text-foreground mb-1">
-                Body — Interface & Expression
+                Body: Interface & Expression
               </h3>
               <p className="text-sm text-muted-foreground">
                 How the agent interacts with you and the world. The user
@@ -162,53 +161,151 @@ export default function AboutPage() {
                 This is a contributor-only showcase.
               </h3>
               <p className="text-muted-foreground mb-4">
-                To be featured in v1, you must contribute something concrete to
-                the Think ecosystem. This keeps the surface credible and the
-                community invested.
+                To be featured, you need a working project, not just an idea or
+                concept. This keeps the directory credible and helps visitors
+                find real, usable tools.
               </p>
               <p className="text-sm text-muted-foreground mb-4">
-                <strong>&quot;Contribute&quot;</strong> means one of:
+                <strong>What counts as a contribution:</strong>
               </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>Build:</strong> FE component, API route, schema, or
-                    integration
+                    <strong>Ship a project:</strong> An agent, tool, or app
+                    that&apos;s live and usable (even if in beta)
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>UX:</strong> Flows, wireframes, UI kit, or layout
-                    system
+                    <strong>Build infrastructure:</strong> Components, APIs, or
+                    integrations others can use
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>Content:</strong> Listing template, taxonomy, or
-                    Think framing copy
+                    <strong>Design systems:</strong> UX flows, wireframes, or UI
+                    kits for the ecosystem
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>
-                    <strong>Ops:</strong> Documentation, contributor onboarding,
-                    or QA checklist
+                    <strong>Create content:</strong> Documentation, tutorials,
+                    or guides that help others build
                   </span>
                 </li>
               </ul>
+              <p className="text-sm text-muted-foreground border-t border-border/50 pt-4">
+                <strong>Note:</strong> &quot;Working&quot; doesn&apos;t mean
+                perfect. Beta projects, MVPs, and experiments are all welcome as
+                long as someone can actually try them.
+              </p>
             </CardContent>
           </Card>
         </section>
 
+        {/* How to Get Started */}
+        <section id="get-started" className="mb-16 scroll-mt-20">
+          <h2 className="font-body text-2xl font-semibold text-foreground mb-6">
+            How to Get Started
+          </h2>
+          <div className="grid gap-4">
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  1
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Learn the basics
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Read the{" "}
+                    <a
+                      href="https://docs.thinkagents.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Think documentation
+                    </a>{" "}
+                    to understand the Agent Standard and how Soul, Mind, and
+                    Body work together.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  2
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Join the community
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Connect with other builders in the{" "}
+                    <a
+                      href="https://discord.gg/thinkagents"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Think Discord
+                    </a>
+                    . Ask questions, share ideas, and find collaborators.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  3
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Build something
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Start small. A simple tool, an agent experiment, or even
+                    documentation improvements. Every contribution counts.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-border p-4 bg-card">
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                  4
+                </span>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Submit your project
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Once you have something working,{" "}
+                    <Link href="/submit" className="text-primary hover:underline">
+                      submit it to the directory
+                    </Link>
+                    . Our team will review it and help you get featured.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
-        <section className="text-center">
-          <h2 className="font-body text-2xl font-semibold text-foreground mb-4">
+        <section className="text-center pt-8">
+          <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl mb-6">
             Ready to share your project?
           </h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-lg text-muted-foreground mb-8">
             Submit your app, tool, or agent to the Think Marketplace.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
