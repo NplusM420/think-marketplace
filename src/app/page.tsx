@@ -6,21 +6,28 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ListingCard } from "@/components/listing-card";
 import { FeaturedCarousel } from "@/components/featured-carousel";
-import {
-  getFeaturedListings,
-  getListingsByType,
-  getAllListingsWithBuilders,
-  categories,
-} from "@/lib/data/seed";
+import { fetchFeaturedListings, fetchListings, fetchCategories } from "@/lib/api";
+import type { Listing } from "@/types";
 
-export default function HomePage() {
-  const featuredListings = getFeaturedListings();
-  const agents = getListingsByType("agent");
-  const tools = getListingsByType("tool");
-  const apps = getListingsByType("app");
-  const allListings = getAllListingsWithBuilders().filter(
-    (l) => l.review_state === "approved"
-  );
+export const revalidate = 60; // Revalidate every minute
+
+export default async function HomePage() {
+  // Fetch data from API
+  const [featuredData, allData, agentData, toolData, appData, categoriesData] = await Promise.all([
+    fetchFeaturedListings(),
+    fetchListings({ limit: 6 }),
+    fetchListings({ type: 'agent' }),
+    fetchListings({ type: 'tool' }),
+    fetchListings({ type: 'app' }),
+    fetchCategories(),
+  ]);
+
+  const featuredListings = featuredData.listings as unknown as Listing[];
+  const allListings = allData.listings as unknown as Listing[];
+  const agents = agentData.listings;
+  const tools = toolData.listings;
+  const apps = appData.listings;
+  const categories = categoriesData.categories;
 
   return (
     <Layout>

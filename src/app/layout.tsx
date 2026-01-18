@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Goudy_Bookletter_1911 } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { PrivyProvider } from "@/components/auth";
 import "./globals.css";
 
 const inter = Inter({
@@ -55,10 +56,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <a href="#main-content" className="skip-to-content">
-            Skip to content
-          </a>
-          {children}
+          <PrivyProvider>
+            <a href="#main-content" className="skip-to-content">
+              Skip to content
+            </a>
+            {children}
+          </PrivyProvider>
         </ThemeProvider>
       </body>
     </html>

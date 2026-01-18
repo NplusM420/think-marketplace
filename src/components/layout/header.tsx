@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LoginButton } from "@/components/auth";
 import { cn } from "@/lib/utils";
 
 const navigation = [
@@ -87,9 +88,10 @@ export function Header() {
           ))}
         </div>
 
-        {/* Right side - theme toggle and CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+        {/* Right side - theme toggle, login, and CTA */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
           <ThemeToggle />
+          <LoginButton />
           <Button asChild>
             <Link href="/submit">Submit Listing</Link>
           </Button>
@@ -126,7 +128,8 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-4 pt-4 border-t border-border">
+                <div className="mt-4 pt-4 border-t border-border space-y-3">
+                  <LoginButton />
                   <Button asChild className="w-full">
                     <Link href="/submit" onClick={() => setMobileMenuOpen(false)}>
                       Submit Listing

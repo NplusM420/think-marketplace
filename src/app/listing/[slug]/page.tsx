@@ -22,10 +22,12 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { getListingBySlug, getListingsByBuilder } from "@/lib/data/seed";
+import { fetchListing, fetchBuilder } from "@/lib/api";
 import { ListingCard } from "@/components/listing-card";
 import { cn } from "@/lib/utils";
 import type { Listing } from "@/types";
+
+export const revalidate = 60;
 
 const typeIcons = {
   agent: Bot,
@@ -53,18 +55,18 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const listing = getListingBySlug(slug);
 
-  if (!listing) {
+  try {
+    const listing = await fetchListing(slug);
+    return {
+      title: listing.name,
+      description: listing.short_description,
+    };
+  } catch {
     return {
       title: "Not Found",
     };
   }
-
-  return {
-    title: listing.name,
-    description: listing.short_description,
-  };
 }
 
 function ThinkFitSection({ listing }: { listing: Listing }) {
@@ -176,16 +178,29 @@ export default async function ListingPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const listing = getListingBySlug(slug);
 
-  if (!listing || listing.review_state !== "approved") {
+  let listing: Listing;
+  let moreFromBuilder: Listing[] = [];
+
+  try {
+    listing = await fetchListing(slug) as unknown as Listing;
+  } catch {
     notFound();
   }
 
   const TypeIcon = typeIcons[listing.type];
-  const moreFromBuilder = getListingsByBuilder(listing.builder_id).filter(
-    (l) => l.id !== listing.id
-  );
+
+  // Fetch more from the same builder
+  if (listing.builder?.slug) {
+    try {
+      const builderData = await fetchBuilder(listing.builder.slug);
+      moreFromBuilder = ((builderData.listings || []) as unknown as Listing[]).filter(
+        (l) => l.id !== listing.id
+      );
+    } catch {
+      // Ignore errors fetching more listings
+    }
+  }
 
   return (
     <Layout>

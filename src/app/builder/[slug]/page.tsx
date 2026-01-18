@@ -6,7 +6,10 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { ListingCard } from "@/components/listing-card";
-import { getBuilderBySlug, getListingsByBuilder } from "@/lib/data/seed";
+import { fetchBuilder } from "@/lib/api";
+import type { Builder, Listing } from "@/types";
+
+export const revalidate = 60;
 
 export async function generateMetadata({
   params,
@@ -14,18 +17,18 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const builder = getBuilderBySlug(slug);
 
-  if (!builder) {
+  try {
+    const builder = await fetchBuilder(slug);
+    return {
+      title: builder.name,
+      description: builder.bio || `View listings from ${builder.name} on Think Marketplace`,
+    };
+  } catch {
     return {
       title: "Not Found",
     };
   }
-
-  return {
-    title: builder.name,
-    description: builder.bio || `View listings from ${builder.name} on Think Marketplace`,
-  };
 }
 
 export default async function BuilderPage({
@@ -34,13 +37,16 @@ export default async function BuilderPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const builder = getBuilderBySlug(slug);
 
-  if (!builder) {
+  let builder: Builder & { listings?: Listing[] };
+
+  try {
+    builder = await fetchBuilder(slug) as Builder & { listings?: Listing[] };
+  } catch {
     notFound();
   }
 
-  const listings = getListingsByBuilder(builder.id);
+  const listings = (builder.listings || []) as unknown as Listing[];
 
   return (
     <Layout>

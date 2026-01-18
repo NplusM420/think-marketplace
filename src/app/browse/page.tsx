@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo, Suspense } from "react";
+import { useState, useMemo, Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, X, Bot, Wrench, AppWindow, SlidersHorizontal } from "lucide-react";
+import { Search, X, Bot, Wrench, AppWindow, SlidersHorizontal, Loader2 } from "lucide-react";
 
 import { Layout } from "@/components/layout";
 import { Input } from "@/components/ui/input";
@@ -23,9 +23,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ListingCard } from "@/components/listing-card";
-import { getAllListingsWithBuilders, categories } from "@/lib/data/seed";
 import { cn } from "@/lib/utils";
-import type { ListingType, ListingStatus } from "@/types";
+import type { Listing, ListingType, ListingStatus, Category } from "@/types";
 
 const typeFilters: { value: ListingType | "all"; label: string; icon: React.ElementType }[] = [
   { value: "all", label: "All Types", icon: SlidersHorizontal },
@@ -50,7 +49,7 @@ const sortOptions = [
 
 function BrowseContent() {
   const searchParams = useSearchParams();
-  
+
   // Initialize from URL params
   const initialType = (searchParams.get("type") as ListingType) || "all";
   const initialStatus = (searchParams.get("status") as ListingStatus) || "all";
@@ -62,10 +61,33 @@ function BrowseContent() {
   const [selectedStatus, setSelectedStatus] = useState<ListingStatus | "all">(initialStatus);
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [sortBy, setSortBy] = useState("newest");
+  const [allListings, setAllListings] = useState<Listing[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const allListings = getAllListingsWithBuilders().filter(
-    (l) => l.review_state === "approved"
-  );
+  // Fetch data from API
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [listingsRes, categoriesRes] = await Promise.all([
+          fetch('/api/listings?limit=100'),
+          fetch('/api/categories'),
+        ]);
+
+        const listingsData = await listingsRes.json();
+        const categoriesData = await categoriesRes.json();
+
+        setAllListings(listingsData.listings || []);
+        setCategories(categoriesData.categories || []);
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   // Filter and sort listings
   const filteredListings = useMemo(() => {
@@ -95,11 +117,7 @@ function BrowseContent() {
     // Category filter
     if (selectedCategory) {
       result = result.filter((l) =>
-        l.categories.some(
-          (c) =>
-            c === selectedCategory ||
-            categories.find((cat) => cat.slug === selectedCategory)?.id === c
-        )
+        l.categories.some((c) => c === selectedCategory)
       );
     }
 
@@ -141,6 +159,16 @@ function BrowseContent() {
     selectedType !== "all" ||
     selectedStatus !== "all" ||
     selectedCategory;
+
+  if (loading) {
+    return (
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center py-24">
+          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
