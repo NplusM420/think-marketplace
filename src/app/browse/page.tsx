@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Search, X, Bot, Wrench, AppWindow, SlidersHorizontal } from "lucide-react";
 
@@ -48,7 +48,7 @@ const sortOptions = [
   { value: "name-desc", label: "Name (Z-A)" },
 ];
 
-export default function BrowsePage() {
+function BrowseContent() {
   const searchParams = useSearchParams();
   
   // Initialize from URL params
@@ -143,299 +143,324 @@ export default function BrowsePage() {
     selectedCategory;
 
   return (
-    <Layout>
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Page header */}
-        <div className="mb-8">
-          <h1 className="font-body text-3xl font-semibold text-foreground mb-2">
-            Browse Directory
-          </h1>
-          <p className="text-muted-foreground">
-            Explore apps, tools, and agents built on Think
-          </p>
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      {/* Page header */}
+      <div className="mb-8">
+        <h1 className="font-body text-3xl font-semibold text-foreground mb-2">
+          Browse Directory
+        </h1>
+        <p className="text-muted-foreground">
+          Explore apps, tools, and agents built on Think
+        </p>
+      </div>
+
+      {/* Search and filters */}
+      <div className="mb-8 space-y-4">
+        {/* Search bar */}
+        <div className="relative">
+          <Search
+            className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+            aria-hidden="true"
+          />
+          <Input
+            type="search"
+            placeholder="Search listings..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10 pr-10"
+            aria-label="Search listings"
+          />
+          {searchQuery && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-1 top-1/2 h-7 w-7 -translate-y-1/2"
+              onClick={() => setSearchQuery("")}
+              aria-label="Clear search"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          )}
         </div>
 
-        {/* Search and filters */}
-        <div className="mb-8 space-y-4">
-          {/* Search bar */}
-          <div className="relative">
-            <Search
-              className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
-              aria-hidden="true"
-            />
-            <Input
-              type="search"
-              placeholder="Search listings..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-10"
-              aria-label="Search listings"
-            />
-            {searchQuery && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-1 top-1/2 h-7 w-7 -translate-y-1/2"
-                onClick={() => setSearchQuery("")}
-                aria-label="Clear search"
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            )}
-          </div>
-
-          {/* Desktop filters */}
-          <div className="hidden lg:flex items-center gap-4">
-            {/* Type filter chips */}
-            <div className="flex items-center gap-2">
-              {typeFilters.map((filter) => {
-                const Icon = filter.icon;
-                return (
-                  <Button
-                    key={filter.value}
-                    variant={selectedType === filter.value ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedType(filter.value)}
-                    className={cn(
-                      "gap-1.5",
-                      selectedType === filter.value && "shadow-sm"
-                    )}
-                  >
-                    <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-                    {filter.label}
-                  </Button>
-                );
-              })}
-            </div>
-
-            <div className="h-6 w-px bg-border" aria-hidden="true" />
-
-            {/* Status filter */}
-            <Select value={selectedStatus} onValueChange={(v) => setSelectedStatus(v as ListingStatus | "all")}>
-              <SelectTrigger className="w-[140px]" aria-label="Filter by status">
-                <SelectValue placeholder="Status" />
-              </SelectTrigger>
-              <SelectContent>
-                {statusFilters.map((filter) => (
-                  <SelectItem key={filter.value} value={filter.value}>
-                    {filter.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {/* Category filter */}
-            <Select value={selectedCategory || "all"} onValueChange={(v) => setSelectedCategory(v === "all" ? "" : v)}>
-              <SelectTrigger className="w-[160px]" aria-label="Filter by category">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                {categories.map((cat) => (
-                  <SelectItem key={cat.id} value={cat.slug}>
-                    {cat.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {/* Sort */}
-            <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-[150px]" aria-label="Sort listings">
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                {sortOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {/* Clear filters */}
-            {hasActiveFilters && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={clearFilters}
-                className="text-muted-foreground"
-              >
-                Clear all
-                <X className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
-              </Button>
-            )}
-          </div>
-
-          {/* Mobile filters */}
-          <div className="flex lg:hidden items-center gap-2">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" className="flex-1">
-                  <SlidersHorizontal className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Filters
-                  {hasActiveFilters && (
-                    <Badge variant="secondary" className="ml-2">
-                      Active
-                    </Badge>
+        {/* Desktop filters */}
+        <div className="hidden lg:flex items-center gap-4">
+          {/* Type filter chips */}
+          <div className="flex items-center gap-2">
+            {typeFilters.map((filter) => {
+              const Icon = filter.icon;
+              return (
+                <Button
+                  key={filter.value}
+                  variant={selectedType === filter.value ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedType(filter.value)}
+                  className={cn(
+                    "gap-1.5",
+                    selectedType === filter.value && "shadow-sm"
                   )}
+                >
+                  <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                  {filter.label}
                 </Button>
-              </SheetTrigger>
-              <SheetContent side="bottom" className="h-[80vh]">
-                <SheetHeader>
-                  <SheetTitle>Filters</SheetTitle>
-                </SheetHeader>
-                <div className="mt-6 space-y-6">
-                  {/* Type */}
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Type
-                    </label>
-                    <div className="flex flex-wrap gap-2">
-                      {typeFilters.map((filter) => {
-                        const Icon = filter.icon;
-                        return (
-                          <Button
-                            key={filter.value}
-                            variant={
-                              selectedType === filter.value ? "default" : "outline"
-                            }
-                            size="sm"
-                            onClick={() => setSelectedType(filter.value)}
-                            className="gap-1.5"
-                          >
-                            <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-                            {filter.label}
-                          </Button>
-                        );
-                      })}
-                    </div>
-                  </div>
+              );
+            })}
+          </div>
 
-                  {/* Status */}
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Status
-                    </label>
-                    <div className="flex flex-wrap gap-2">
-                      {statusFilters.map((filter) => (
+          <div className="h-6 w-px bg-border" aria-hidden="true" />
+
+          {/* Status filter */}
+          <Select value={selectedStatus} onValueChange={(v) => setSelectedStatus(v as ListingStatus | "all")}>
+            <SelectTrigger className="w-[140px]" aria-label="Filter by status">
+              <SelectValue placeholder="Status" />
+            </SelectTrigger>
+            <SelectContent>
+              {statusFilters.map((filter) => (
+                <SelectItem key={filter.value} value={filter.value}>
+                  {filter.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          {/* Category filter */}
+          <Select value={selectedCategory || "all"} onValueChange={(v) => setSelectedCategory(v === "all" ? "" : v)}>
+            <SelectTrigger className="w-[160px]" aria-label="Filter by category">
+              <SelectValue placeholder="Category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Categories</SelectItem>
+              {categories.map((cat) => (
+                <SelectItem key={cat.id} value={cat.slug}>
+                  {cat.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          {/* Sort */}
+          <Select value={sortBy} onValueChange={setSortBy}>
+            <SelectTrigger className="w-[150px]" aria-label="Sort listings">
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
+            <SelectContent>
+              {sortOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          {/* Clear filters */}
+          {hasActiveFilters && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={clearFilters}
+              className="text-muted-foreground"
+            >
+              Clear all
+              <X className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
+            </Button>
+          )}
+        </div>
+
+        {/* Mobile filters */}
+        <div className="flex lg:hidden items-center gap-2">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" className="flex-1">
+                <SlidersHorizontal className="mr-2 h-4 w-4" aria-hidden="true" />
+                Filters
+                {hasActiveFilters && (
+                  <Badge variant="secondary" className="ml-2">
+                    Active
+                  </Badge>
+                )}
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="bottom" className="h-[80vh]">
+              <SheetHeader>
+                <SheetTitle>Filters</SheetTitle>
+              </SheetHeader>
+              <div className="mt-6 space-y-6">
+                {/* Type */}
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Type
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    {typeFilters.map((filter) => {
+                      const Icon = filter.icon;
+                      return (
                         <Button
                           key={filter.value}
                           variant={
-                            selectedStatus === filter.value ? "default" : "outline"
+                            selectedType === filter.value ? "default" : "outline"
                           }
                           size="sm"
-                          onClick={() => setSelectedStatus(filter.value)}
+                          onClick={() => setSelectedType(filter.value)}
+                          className="gap-1.5"
                         >
+                          <Icon className="h-3.5 w-3.5" aria-hidden="true" />
                           {filter.label}
                         </Button>
-                      ))}
-                    </div>
+                      );
+                    })}
                   </div>
-
-                  {/* Category */}
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Category
-                    </label>
-                    <Select value={selectedCategory || "all"} onValueChange={(v) => setSelectedCategory(v === "all" ? "" : v)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="All Categories" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">All Categories</SelectItem>
-                        {categories.map((cat) => (
-                          <SelectItem key={cat.id} value={cat.slug}>
-                            {cat.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  {/* Sort */}
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Sort by
-                    </label>
-                    <Select value={sortBy} onValueChange={setSortBy}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Sort by" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {sortOptions.map((option) => (
-                          <SelectItem key={option.value} value={option.value}>
-                            {option.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  {/* Clear */}
-                  {hasActiveFilters && (
-                    <Button
-                      variant="outline"
-                      onClick={clearFilters}
-                      className="w-full"
-                    >
-                      Clear all filters
-                    </Button>
-                  )}
                 </div>
-              </SheetContent>
-            </Sheet>
 
-            <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-[140px]" aria-label="Sort listings">
-                <SelectValue placeholder="Sort" />
-              </SelectTrigger>
-              <SelectContent>
-                {sortOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+                {/* Status */}
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Status
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    {statusFilters.map((filter) => (
+                      <Button
+                        key={filter.value}
+                        variant={
+                          selectedStatus === filter.value ? "default" : "outline"
+                        }
+                        size="sm"
+                        onClick={() => setSelectedStatus(filter.value)}
+                      >
+                        {filter.label}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Category */}
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Category
+                  </label>
+                  <Select value={selectedCategory || "all"} onValueChange={(v) => setSelectedCategory(v === "all" ? "" : v)}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="All Categories" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Categories</SelectItem>
+                      {categories.map((cat) => (
+                        <SelectItem key={cat.id} value={cat.slug}>
+                          {cat.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Sort */}
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Sort by
+                  </label>
+                  <Select value={sortBy} onValueChange={setSortBy}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Sort by" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {sortOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Clear */}
+                {hasActiveFilters && (
+                  <Button
+                    variant="outline"
+                    onClick={clearFilters}
+                    className="w-full"
+                  >
+                    Clear all filters
+                  </Button>
+                )}
+              </div>
+            </SheetContent>
+          </Sheet>
+
+          <Select value={sortBy} onValueChange={setSortBy}>
+            <SelectTrigger className="w-[140px]" aria-label="Sort listings">
+              <SelectValue placeholder="Sort" />
+            </SelectTrigger>
+            <SelectContent>
+              {sortOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
-
-        {/* Results count */}
-        <div className="mb-6">
-          <p className="text-sm text-muted-foreground">
-            {filteredListings.length} listing
-            {filteredListings.length !== 1 ? "s" : ""} found
-          </p>
-        </div>
-
-        {/* Results grid */}
-        {filteredListings.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredListings.map((listing) => (
-              <ListingCard key={listing.id} listing={listing} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-muted">
-              <Search className="h-8 w-8 text-muted-foreground" aria-hidden="true" />
-            </div>
-            <h3 className="font-body text-lg font-semibold text-foreground mb-2">
-              No listings found
-            </h3>
-            <p className="text-muted-foreground max-w-sm mx-auto mb-6">
-              Try adjusting your search or filters to find what you&apos;re
-              looking for.
-            </p>
-            {hasActiveFilters && (
-              <Button variant="outline" onClick={clearFilters}>
-                Clear all filters
-              </Button>
-            )}
-          </div>
-        )}
       </div>
+
+      {/* Results count */}
+      <div className="mb-6">
+        <p className="text-sm text-muted-foreground">
+          {filteredListings.length} listing
+          {filteredListings.length !== 1 ? "s" : ""} found
+        </p>
+      </div>
+
+      {/* Results grid */}
+      {filteredListings.length > 0 ? (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredListings.map((listing) => (
+            <ListingCard key={listing.id} listing={listing} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-16">
+          <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-muted">
+            <Search className="h-8 w-8 text-muted-foreground" aria-hidden="true" />
+          </div>
+          <h3 className="font-body text-lg font-semibold text-foreground mb-2">
+            No listings found
+          </h3>
+          <p className="text-muted-foreground max-w-sm mx-auto mb-6">
+            Try adjusting your search or filters to find what you&apos;re
+            looking for.
+          </p>
+          {hasActiveFilters && (
+            <Button variant="outline" onClick={clearFilters}>
+              Clear all filters
+            </Button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function BrowseLoading() {
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mb-8">
+        <div className="h-9 w-48 bg-muted animate-pulse rounded" />
+        <div className="h-5 w-64 bg-muted animate-pulse rounded mt-2" />
+      </div>
+      <div className="h-10 w-full bg-muted animate-pulse rounded mb-8" />
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className="h-48 bg-muted animate-pulse rounded-xl" />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function BrowsePage() {
+  return (
+    <Layout>
+      <Suspense fallback={<BrowseLoading />}>
+        <BrowseContent />
+      </Suspense>
     </Layout>
   );
 }
