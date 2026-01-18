@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Directory — Homepage Copy Options</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a25;
+            --accent-cyan: #00f0ff;
+            --accent-purple: #a855f7;
+            --accent-gradient: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
+            --text-primary: #ffffff;
+            --text-secondary: #8a8a9a;
+            --text-muted: #5a5a6a;
+            --border-subtle: rgba(255,255,255,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Subtle grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .page-header h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-subtle);
+        }
+
+        /* Option Cards */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 800px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .option-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(0, 240, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .option-label {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .option-name {
+            font-family: 'Syne', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-cyan);
+        }
+
+        .option-tag {
+            font-size: 10px;
+            padding: 4px 10px;
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent-purple);
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Hero Preview */
+        .hero-preview {
+            padding: 48px 32px;
+            text-align: center;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-headline {
+            font-family: 'Syne', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .hero-subhead {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 360px;
+            line-height: 1.5;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: var(--accent-gradient);
+            color: #000;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .hero-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+        }
+
+        .hero-cta svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Recommendation Card */
+        .recommendation {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recommendation::before {
+            content: '★';
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 24px;
+            color: var(--accent-cyan);
+            opacity: 0.5;
+        }
+
+        .recommendation-badge {
+            display: inline-block;
+            font-family: 'Syne', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 14px;
+            background: var(--accent-gradient);
+            color: #000;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .recommendation .hero-headline {
+            font-size: 36px;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .recommendation .hero-subhead {
+            text-align: left;
+            max-width: 500px;
+            margin-bottom: 24px;
+        }
+
+        .recommendation .hero-cta {
+            margin-bottom: 24px;
+        }
+
+        .recommendation-note {
+            font-size: 13px;
+            color: var(--text-muted);
+            padding-top: 20px;
+            border-top: 1px solid var(--border-subtle);
+            line-height: 1.6;
+        }
+
+        /* Section Headers Preview */
+        .section-headers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 700px) {
+            .section-headers {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .header-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .header-group-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .header-option {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .header-option:last-child {
+            border-bottom: none;
+        }
+
+        .header-option.preferred {
+            color: var(--accent-cyan);
+            font-weight: 500;
+        }
+
+        /* About Section Preview */
+        .about-preview {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 700px) {
+            .about-preview {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .about-card-label {
+            font-family: 'Syne', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-purple);
+            margin-bottom: 16px;
+        }
+
+        .about-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Taglines */
+        .taglines {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .tagline-chip {
+            padding: 10px 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .tagline-chip:hover {
+            border-color: var(--accent-cyan);
+            color: var(--text-primary);
+        }
+
+        .tagline-chip.preferred {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-cyan);
+        }
+
+        /* Footer Note */
+        .footer-note {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .footer-note strong {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header class="page-header">
+            <h1>Think Directory</h1>
+            <p>Homepage Copy Options — Pick a direction, mix & match, or refine</p>
+        </header>
+
+        <!-- Main Options -->
+        <div class="section-title">Headline Options</div>
+        
+        <div class="options-grid">
+            
+            <!-- Option A -->
+            <div class="option-card">
+                <div class="option-label">
+                    <span class="option-name">Option A</span>
+                    <span class="option-tag">Community-Forward</span>
+                </div>
+                <div class="hero-preview">
+                    <h2 class="hero-headline">Meet the Builders of AI You Own</h2>
+                    <p class="hero-subhead">Explore agents, tools, and apps created by the Think community — and the people behind them.</p>
+                    <a href="#" class="hero-cta">
+                        Browse the Directory
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Option B -->
+            <div class="option-card">
+                <div class="option-label">
+                    <span class="option-name">Option B</span>
+                    <span class="option-tag">Discovery-Forward</span>
+                </div>
+                <div class="hero-preview">
+                    <h2 class="hero-headline">Discover What's Being Built on Think</h2>
+                    <p class="hero-subhead">A curated showcase of agents, tools, and apps from the builders shaping user-owned AI.</p>
+                    <a href="#" class="hero-cta">
+                        Explore Now
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Option C -->
+            <div class="option-card">
+                <div class="option-label">
+                    <span class="option-name">Option C</span>
+                    <span class="option-tag">Builder-Forward</span>
+                </div>
+                <div class="hero-preview">
+                    <h2 class="hero-headline">The Think Builder Showcase</h2>
+                    <p class="hero-subhead">Agents. Tools. Apps. The people creating them — and how to join them.</p>
+                    <a href="#" class="hero-cta">
+                        See Who's Building
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Option D -->
+            <div class="option-card">
+                <div class="option-label">
+                    <span class="option-name">Option D</span>
+                    <span class="option-tag">Short & Punchy</span>
+                </div>
+                <div class="hero-preview">
+                    <h2 class="hero-headline">AI You Own. Builders You Should Know.</h2>
+                    <p class="hero-subhead">The official directory of agents, tools, and apps built on Think.</p>
+                    <a href="#" class="hero-cta">
+                        Browse Directory
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Recommendation -->
+        <div class="section-title">Recommended for V1</div>
+        
+        <div class="recommendation">
+            <div class="recommendation-badge">★ Recommended</div>
+            <h2 class="hero-headline">Discover What's Being Built on Think</h2>
+            <p class="hero-subhead">A curated showcase of agents, tools, and apps from the builders shaping user-owned AI.</p>
+            <a href="#" class="hero-cta">
+                Browse the Directory
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+            <p class="recommendation-note">
+                <strong>Why this works:</strong> Discovery-first framing is ideal for demos. "Curated" signals quality without being exclusive. "User-owned AI" ties directly to Think's core message. Easy to evolve toward "Meet the Builders" later if community becomes more central.
+            </p>
+        </div>
+
+        <!-- Section Headers -->
+        <div class="section-title">Section Headers</div>
+        
+        <div class="section-headers">
+            <div class="header-group">
+                <div class="header-group-title">Featured</div>
+                <div class="header-option preferred">Featured</div>
+                <div class="header-option">Spotlight</div>
+                <div class="header-option">Editor's Picks</div>
+            </div>
+            <div class="header-group">
+                <div class="header-group-title">New</div>
+                <div class="header-option preferred">New & Notable</div>
+                <div class="header-option">Recently Added</div>
+                <div class="header-option">Fresh Drops</div>
+            </div>
+            <div class="header-group">
+                <div class="header-group-title">Categories</div>
+                <div class="header-option">Browse by Type</div>
+                <div class="header-option preferred">Agents / Tools / Bodies / Apps</div>
+                <div class="header-option">Explore Categories</div>
+            </div>
+            <div class="header-group">
+                <div class="header-group-title">Builders</div>
+                <div class="header-option preferred">Meet the Builders</div>
+                <div class="header-option">Community</div>
+                <div class="header-option">Who's Building</div>
+            </div>
+        </div>
+
+        <!-- About Section Options -->
+        <div class="section-title">About Section Copy</div>
+        
+        <div class="about-preview">
+            <div class="about-card">
+                <div class="about-card-label">Option A — Casual</div>
+                <p>Think Directory is a showcase of the best agents, tools, and apps being built on the Think Protocol — plus the builders behind them.</p>
+                <p>We're not a marketplace (yet). Think of it as a window into what's possible when AI is something you own, not rent.</p>
+                <p>Want to be featured? You'll need to contribute something real. That's the only rule.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-label">Option B — Polished</div>
+                <p>Think Directory is the official showcase for projects and builders in the Think ecosystem.</p>
+                <p>Here you'll find autonomous agents, developer tools, interfaces, and applications — all built on the open protocol for user-owned AI.</p>
+                <p>This is a contributor-only showcase. To be featured, builders must actively participate in the Think community.</p>
+            </div>
+        </div>
+
+        <!-- Taglines -->
+        <div class="section-title">Tagline Options (Nav / Header / Footer)</div>
+        
+        <div class="taglines">
+            <span class="tagline-chip preferred">The Think Builder Showcase</span>
+            <span class="tagline-chip">Discover AI You Own</span>
+            <span class="tagline-chip">The Official Think Directory</span>
+            <span class="tagline-chip">Agents. Tools. Builders.</span>
+            <span class="tagline-chip">What's Being Built on Think</span>
+        </div>
+
+        <footer class="footer-note">
+            <p>Pick a direction, share with Johnny for design treatment, or come back to refine. <strong>Mix & match is encouraged.</strong></p>
+        </footer>
+
+    </div>
+</body>
+</html>
